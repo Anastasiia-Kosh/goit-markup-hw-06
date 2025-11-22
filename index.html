@@ -85,29 +85,29 @@
             </ul>
           </address>
           <ul class="mobile-social-list">
-            <li class="page-footer-social">
-              <a href="" target="_blank" class="link-footer">
+            <li class="mobile-social">
+              <a href="" target="_blank" class="link-mobile">
                 <svg class="icon" width="24" height="24" fill="none">
                   <use href="./images/icons.svg#icon-instagram-2"></use>
                 </svg>
               </a>
             </li>
-            <li class="page-footer-social">
-              <a href="" target="_blank" class="link-footer">
+            <li class="mobile-social">
+              <a href="" target="_blank" class="link-mobile">
                 <svg class="icon" width="24" height="24" fill="none">
                   <use href="./images/icons.svg#icon-twitter-1"></use>
                 </svg>
               </a>
             </li>
-            <li class="page-footer-social">
-              <a href="" target="_blank" class="link-footer">
+            <li class="mobile-social">
+              <a href="" target="_blank" class="link-mobile">
                 <svg class="icon" width="24" height="24" fill="none">
                   <use href="./images/icons.svg#icon-facebook-1"></use>
                 </svg>
               </a>
             </li>
-            <li class="page-footer-social">
-              <a href="" target="_blank" class="link-footer">
+            <li class="mobile-social">
+              <a href="" target="_blank" class="link-mobile">
                 <svg class="icon" width="24" height="24" fill="none">
                   <use href="./images/icons.svg#icon-linkedin-1"></use>
                 </svg>
@@ -208,6 +208,10 @@
           <ul class="our-team-four-cards">
             <li class="team-photo">
               <img
+                srcset="
+                  ./images/Mark_Guerrero.jpg    1x,
+                  ./images/Mark_Guerrero@2x.jpg 2x
+                "
                 src="./images/Mark_Guerrero.jpg"
                 alt="photo of Mark Guerrero"
                 width="264"
@@ -251,6 +255,7 @@
             </li>
             <li class="team-photo">
               <img
+                srcset="./images/Tom_Ford.jpg 1x, ./images/Tom_Ford@2x.jpg 2x"
                 src="./images/Tom_Ford.jpg"
                 alt="photo of Tom Ford"
                 width="264"
@@ -293,6 +298,10 @@
             </li>
             <li class="team-photo">
               <img
+                srcset="
+                  ./images/Camila_Garcia.jpg    1x,
+                  ./images/Camila_Garcia@2x.jpg 2x
+                "
                 src="./images/Camila_Garcia.jpg"
                 alt="photo of Camila Garcia"
                 width="264"
@@ -335,6 +344,10 @@
             </li>
             <li class="team-photo">
               <img
+                srcset="
+                  ./images/Daniel_Wilson.jpg    1x,
+                  ./images/Daniel_Wilson@2x.jpg 2x
+                "
                 src="./images/Daniel_Wilson.jpg"
                 alt="photo of Daniel Wilson"
                 width="264"
@@ -379,7 +392,7 @@
         </div>
       </section>
 
-      <section class="portfolio section hidden">
+      <section class="portfolio">
         <div class="container">
           <h2 class="portfolio-title">Our Portfolio</h2>
           <ul class="portfolio-card-set">
@@ -502,10 +515,10 @@
         </div>
       </section>
     </main>
-    <footer class="page-footer hidden">
+    <footer class="page-footer">
       <div class="container wrapper-page-footer">
         <div class="page-footer-text">
-          <a class="logonav logo-footer" href="./index.html"
+          <a class="logo-footer" href="./index.html"
             >Web<span class="logoend">Studio</span></a
           >
           <p class="footer-text">
@@ -568,7 +581,7 @@
         </div>
       </div>
     </footer>
-    <div class="modal-overlay hidden" data-modal>
+    <div class="modal-overlay" data-modal>
       <div class="modal">
         <button class="modal-form-close-btn" type="button" data-modal-close>
           <svg class="modal-form-close-btn-icon" width="8" height="8">
@@ -659,8 +672,10 @@
                   <use href="./images/icons.svg#icon-check"></use>
                 </svg>
               </span>
-              I accept the terms and conditions of the
-              <a href="" class="modal-input-link">Privacy Policy</a>
+              <span class="checkbox-custom-text">
+                I accept the terms and conditions of the
+                <a href="" class="modal-input-link">Privacy Policy</a></span
+              >
             </label>
           </div>
           <button class="modal-form-send-btn">Send</button>
