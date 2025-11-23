@@ -237,7 +237,6 @@ body {
   position: relative;
   padding-top: 72px;
   padding-bottom: 40px;
-
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -301,11 +300,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.link-mobile:active {
-  background-color: #31d0aa;
-}
+
 .link-mobile .icon {
   fill: #fff;
 }
@@ -367,10 +363,6 @@ body {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   border: none;
   margin: 0 auto;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.page-button:active {
-  background-color: #404bbf;
 }
 
 /* solutions-tablet */
@@ -404,10 +396,6 @@ body {
     display: block;
     margin: 0 auto 36px auto;
   }
-  .page-button:hover,
-  .page-button:focus {
-    background-color: #404bbf;
-  }
 }
 
 /* solutions-desctop */
@@ -432,6 +420,13 @@ body {
   }
   .page-title {
     margin: 0 auto 48px auto;
+  }
+  .page-button {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .page-button:hover,
+  .page-button:focus {
+    background-color: #404bbf;
   }
 }
 
@@ -603,11 +598,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.link-our-team:active {
-  background-color: #404bbf;
-}
+
 .our-team-four-cards-social .icon {
   fill: #f4f4fd;
 }
@@ -624,10 +616,6 @@ body {
   .team-photo {
     width: calc((100% - 24px) / 2);
   }
-  .link-our-team:hover,
-  .link-our-team:focus {
-    background-color: #404bbf;
-  }
 }
 /* team-desctop */
 @media screen and (min-width: 1158px) {
@@ -643,6 +631,13 @@ body {
   }
   .team-photo {
     width: calc((100% - 72px) / 4);
+  }
+  .link-our-team {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .link-our-team:hover,
+  .link-our-team:focus {
+    background-color: #404bbf;
   }
 }
 
@@ -697,6 +692,11 @@ body {
   display: none;
 }
 
+.portfolio-picture img {
+  width: 288px;
+  height: 280px;
+}
+
 /* portfolio-tablet */
 @media screen and (min-width: 768px) {
   .portfolio-card-set {
@@ -708,8 +708,12 @@ body {
   .portfolio-card {
     width: calc((100% - 24px) / 2);
   }
-}
 
+  .portfolio-picture img {
+    width: 356px;
+    height: 300px;
+  }
+}
 /* portfolio-desctop */
 @media screen and (min-width: 1158px) {
   .portfolio {
@@ -752,6 +756,10 @@ body {
     height: 100%;
     transform: translateY(100%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .portfolio-picture img {
+    width: 360px;
+    height: 300px;
   }
 }
 /* footer-mobile */
@@ -840,7 +848,6 @@ body {
   margin-bottom: 0;
 }
 .form-footer-input {
-  border: none;
   border: 1px solid #fff;
   border-radius: 4px;
   width: 288px;
@@ -873,7 +880,6 @@ body {
   text-align: center;
   color: #fff;
   min-width: 165px;
-  cursor: pointer;
 }
 .icon-subscribe {
   fill: #fff;
@@ -923,6 +929,9 @@ body {
   }
   .form-footer {
     gap: 24px;
+  }
+  .form-footer-btn {
+    cursor: pointer;
   }
   .link-footer {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1009,14 +1018,12 @@ body {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-close-btn:hover,
-.modal-form-close-btn:focus-within,
-.modal-form-close-btn:active {
+.modal-form-close-btn:focus-within {
   background-color: #404bbf;
   border: none;
 }
 .modal-form-close-btn:hover .modal-form-close-btn-icon,
-.modal-form-close-btn:focus-within .modal-form-close-btn-icon,
-.modal-form-close-btn:active .modal-form-close-btn-icon {
+.modal-form-close-btn:focus-within .modal-form-close-btn-icon {
   fill: #fff;
 }
 .modal-form-title {
@@ -1038,12 +1045,12 @@ body {
   padding-left: 38px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-input:active,
+
 .form-input:focus,
 .form-input:hover {
   border: 1px solid #4d5ae5;
 }
-.form-input:active + .input-wrapper-form-icon,
+
 .form-input:focus + .input-wrapper-form-icon,
 .form-input:hover + .input-wrapper-form-icon {
   fill: #4d5ae5;
@@ -1071,7 +1078,6 @@ body {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-textarea:focus,
-.form-textarea:active,
 .form-textarea:hover {
   border: 1px solid #4d5ae5;
 }
@@ -1154,7 +1160,7 @@ input:checked + label > .checkbox-custom {
   margin: 0 auto;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-form-send-btn:active,
+
 .modal-form-send-btn:focus,
 .modal-form-send-btn:hover {
   background-color: #404bbf;
